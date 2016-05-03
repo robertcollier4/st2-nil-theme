@@ -10,21 +10,30 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#131415</string>
+				<string>#000000</string>
 				<key>caret</key>
 				<string>#FFFFFF</string>
 				<key>foreground</key>
-				<string>#DAD6CD</string>
+				<string>#F8F8F8</string>
 				<key>inactiveSelection</key>
 				<string>#e8b8ff7f</string>
 				<key>invisibles</key>
 				<string>#404040</string>
 				<key>lineHighlight</key>
-				<string>#7B10552B</string>
+				<string>#222222</string>
 				<key>selection</key>
-				<string>#ba44e76d</string>
+				<string>#0064C4</string>
 				<key>selectionBorder</key>
-				<string>#c862e687</string>
+				<string>#0064C4</string>
+				<key>guide</key>
+				<string>#24FF00</string>
+ 				<key>findHighlight</key>
+				<string>#00A3F0</string>
+				<key>findHighlightForeground</key>
+				<string>#A0F400</string>
+				<!-- bracket underline when cursor over -->
+				<key>bracketsForeground</key>
+				<string>#D80000</string>
 			</dict>
 		</dict>
 		<dict>
@@ -43,7 +52,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#747166</string>
+				<string>#626262</string>
 			</dict>
 		</dict>
 		<dict>
@@ -65,7 +74,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#00D2E5</string>
+				<string>#00B2A6</string>
 			</dict>
 		</dict>
 		<dict>
@@ -129,6 +138,21 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>delete section</string>
+			<key>scope</key>
+			<string>entity.name.function.section.delete</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#6C0A2F</string>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#F26FBC</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Class (definition)</string>
 			<key>scope</key>
 			<string>entity.name.type</string>
@@ -166,7 +190,7 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Java → Package</string>
+			<string>Java - Package</string>
 			<key>scope</key>
 			<string>meta.package, storage.modifier.package, keyword.other.package</string>
 			<key>settings</key>
@@ -185,18 +209,40 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#99CC66</string>
+				<string>#F8F8F8</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Quote</string>
 			<key>scope</key>
-			<string>punctuation.definition.string.begin, punctuation.definition.string.end</string>
+			<string>punctuation.definition.string, punctuation.definition.quote</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#E882B2</string>
+				<string>#B3B300</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>punctuation definition equals</string>
+			<key>scope</key>
+			<string>punctuation.definition.equals</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#3D8F9A</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Punctuation Bracket</string>
+			<key>scope</key>
+			<string>punctuation.bracket</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#C1C100</string>		<!-- selfedit from FFCC33 -->
 			</dict>
 		</dict>
 		<dict>
@@ -251,7 +297,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#A9D158</string>
+				<string>#00B800</string>
 			</dict>
 		</dict>
 		<dict>
@@ -262,9 +308,22 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#7ACA3B</string>
+				<string>#0082A6</string>
 			</dict>
 		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Support Other</string>
+			<key>scope</key>
+			<string>support.function.other, support.other</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#5050A0</string>
+			</dict>
+		</dict>
+
 		<dict>
 			<key>name</key>
 			<string>Library type</string>
