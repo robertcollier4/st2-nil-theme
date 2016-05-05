@@ -63,18 +63,10 @@ disabled by default. Their keys and descriptions follow:
 
 * `highlight_modified_tabs` — If true, will display an orange bar under
   tabs with modified buffers.
-* `sidebar_folders` — If true, will display a folder icon beside folders
-  in the sidebar instead of a disclosure triangle. Sidebar folders are
-  off by default.
-* `colored_folder_glyphs` — If true, will tint either folder icons or
-  disclosure triangles in the sidebar (only the sidebar) purple.
 * `disable_colored_group_labels` — If true, will disable the colored
   group labels. Group labels are the things that say "Group 1" and 2 and
   so on in the sidebar. They're only visible if you have open files
   shown. Colored group labels are enabled by default.
-* `disable_colored_folder_labels` — If true, will disable the colored
-  folder labels in the sidebar. This is independent of group label
-  coloring. Colored folder labels are enabled by default.
 
 To set any of these properties, place them and their values in your user
 preferences file.

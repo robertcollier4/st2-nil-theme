@@ -427,6 +427,20 @@
 	SIDEBAR
 ==============================================================================*/
 
+	/**---------------------------------------**/
+	/** Sidebar container (background) **/
+	{
+		"class": "sidebar_tree",
+		"dark_content": true,
+		"row_padding": [0, 3], /* left-right padding, top-bottom padding */
+		"indent_top_level": false,
+		"indent": 8, /* this is the tree branch indent */
+		"indent_offset": 19, /* this is the base indent */
+		"layer0.tint": [22,22,22],	/* darker gray */
+		"layer0.opacity": 1.0
+	},
+
+	/**---------------------------------------**/
 	/** Sidebar container (border) **/
 	{
 		"class": "sidebar_container",
@@ -434,242 +448,202 @@
 		"layer0.opacity": 1.0,
 		"layer0.draw_center": false,
 		"layer0.inner_margin": [0, 0, 1, 0],
-		"content_margin": [0, 0, 1, 0]
+		"content_margin": [0, 0, 0, 0] /* left top right bottom */
 	},
-	/** Sidebar tree (bg) **/
+
+	/**---------------------------------------**/
+	/** Sidebar heading **/
 	{
-		"class": "sidebar_tree",
-		"dark_content": true,
-		"row_padding": [12, 4],
-		"indent": 13,
-		"indent_offset": 15,
-		"indent_top_level": false,
-		"layer0.tint": [22,22,22],	/* darker gray */
-		"layer0.opacity": 1.0,
-		"dark_content": true
+		"class": "sidebar_heading",
+		"color": [140, 64, 212],
+		"font.bold": true,
+		// "shadow_color": [0, 0, 0],
+		// "shadow_offset": [0, 0.5]
 	},
-	/** Sidebar rows **/
+	{
+		"class": "sidebar_heading",
+		"color": [212, 212, 212],
+		"settings": ["disable_colored_group_labels"]
+	},
+	// commented out because sidebar selected item same foreground as nonselected
+	// {
+	// 	"class": "sidebar_heading",
+	// 	"parents": [{"class": "tree_row", "attributes": ["selected"]}],
+	// 	"color": [212, 212, 212]
+	// },
+
+	/**---------------------------------------**/
+	/** Sidebar entry label **/
+	{
+		"class": "sidebar_label",
+		"color": [212, 212, 212],
+		"font.face":"Verdana",
+		"font.size": 12.0
+		// "shadow_color": [0, 0, 0],
+		// "shadow_offset": [0, 0.5]
+	},
+	//commented out because sidebar selected item same foreground as nonselected
+	// {	/*	Sidebar selected entry label */
+	// 	"class": "sidebar_label",
+	// 	"parents": [{"class": "tree_row", "attributes": ["selected"]}],
+	// 	"color": [240, 240, 240],
+	// 	"shadow_color": [0, 0, 0],
+	// 	"shadow_offset": [0, 0.5]
+	// },
+
+	/**---------------------------------------**/
+	/** Sidebar row (OPEN FILES) leftmost image **/
 	{
 		"class": "tree_row",
-		"layer0.texture": "Theme - Nil/assets/dark/row-active.png",
+		"layer0.tint": [0, 128, 192],
 		"layer0.opacity": 0.0,
-		"layer0.inner_margin": [8, 3],
-		"layer1.opacity": 0.0,
-		"layer1.inner_margin": [8, 3]
+		// "layer0.inner_margin": [8, 3],
+		// "layer1.tint": [32, 32, 32],
+		// "layer1.opacity": 0.0,
+		// "layer1.inner_margin": [8, 3]
 	},
-	/** Sidebar row selected **/
 	{
 		"class": "tree_row",
 		"attributes": ["selected"],
 		"layer0.opacity": 1.0
 	},
-	/* - Sidebar row dirty */
-	{
-		"class": "tree_row",
-		"attributes": ["dirty"],
-		"layer0.texture": "Theme - Nil/assets/dark/row-inactive-modified.png",
-		"layer0.opacity": 1.0
-	},
-	/* - Sidebar row selected dirty */
-	{
-		"class": "tree_row",
-		"attributes": ["selected", "dirty"],
-		"layer0.texture": "Theme - Nil/assets/dark/row-active-modified.png",
-		"layer0.opacity": 1.0
-	},
-	/** Sidebar heading **/
-	{
-		"class": "sidebar_heading",
-		"color": [182, 160, 0],
-		"font.bold": true,
-		"shadow_color": [0, 0, 0],
-		"shadow_offset": [0, 0.5]
-	},
-	{
-		"class": "sidebar_heading",
-		"color": [180, 180, 180],
-		"settings": ["disable_colored_group_labels"]
-	},
-	{
-		"class": "sidebar_heading",
-		"parents": [{"class": "tree_row", "attributes": ["selected"]}],
-		"color": [180, 180, 180]
-	},
-	/** Sidebar entry label **/
-	{
-		"class": "sidebar_label",
-		"color": [180, 180, 180],
-		"shadow_color": [0, 0, 0],
-		"shadow_offset": [0, 0.5]
-	},
-	{
-		"class": "sidebar_label",
-		"parents": [{"class": "tree_row", "attributes": ["expandable"]}],
-		"settings": ["bold_folder_labels"],
-		"font.bold": true
-	},
-	{
-		"class": "sidebar_label",
-		"parents": [{"class": "tree_row", "attributes": ["expandable"]}],
-		"color": [182, 160, 0]
-	},
-	{
-		"class": "sidebar_label",
-		"parents": [{"class": "tree_row", "attributes": ["expandable"]}],
-		"settings": ["disable_colored_folder_labels"],
-		"color": [180, 180, 180]
-	},
-	{	/*	Sidebar selected entry label */
-		"class": "sidebar_label",
-		"parents": [{"class": "tree_row", "attributes": ["selected"]}],
-		"color": [240, 240, 240],
-		"shadow_color": [0, 0, 0],
-		"shadow_offset": [0, 0.5]
-	},
+	// {
+	// 	"class": "tree_row",
+	// 	"attributes": ["dirty"],
+	// 	"layer0.tint": [192, 32, 32],
+	// 	"layer0.opacity": 1.0
+	// },
+	// {
+	// 	"class": "tree_row",
+	// 	"attributes": ["selected", "dirty"],
+	// 	"layer0.tint": [192, 32, 32],
+	// 	"layer0.opacity": 1.0
+	// },
 
-	/** Sidebar open files close/dirty **/
+	/**---------------------------------------**/
+	/** Sidebar row (OPEN FILES) closebutton leftoffilename **/
 	{
 		"class": "close_button",
-		"layer0.texture": "Theme - Nil/assets/tab-buttons/tab-button-close-hover.png",
-		"layer0.opacity": 0.5,
-		"layer0.inner_margin": 4,
-		"layer1.opacity": 0.0,
-		"layer1.texture":  "Theme - Nil/assets/tab-buttons/tab-button-close.png",
-		"layer1.inner_margin": 4,
-		"content_margin": [8, 8]
+		"layer0.texture": "",
+		"layer0.tint": [192, 32, 32],
+		"layer0.opacity": 1.0,
+		"layer0.inner_margin": 2,
+		// "layer1.texture": "",
+		// "layer1.tint": [192, 32, 32],
+		// "layer1.opacity": 0.0,
+		// "layer1.inner_margin": 4,
+		// "content_margin": [8, 8]
+		"content_margin": [5, 5]
 	},
+	// commented out because close button same color regardless of mouseposition or dirtystate
+	// {
+	// 	"class": "close_button",
+	// 	"attributes": ["pressed"],
+	// 	"layer1.texture": "",
+	// 	"layer1.tint": [192, 22, 22],
+	// 	"layer1.opacity": 1.0
+	// },
 	{
 		"class": "close_button",
 		"attributes": ["dirty"],
-		"layer0.texture": "Theme - Nil/assets/tab-buttons/tab-button-dirty.png",
-		"layer0.opacity": 0.5
+		"layer0.tint": [240, 192, 0],
 	},
-	{
-		"class": "close_button",
-		"attributes": ["hover"],
-		"layer0.texture": "Theme - Nil/assets/tab-buttons/tab-button-close-hover.png",
-		"layer1.opacity": 0.5,
-		"layer1.texture": "Theme - Nil/assets/tab-buttons/tab-button-close.png"
-	},
-	{
-		"class": "close_button",
-		"attributes": ["hover", "dirty"],
-		"layer1.opacity": 0.5,
-		"layer1.texture": "Theme - Nil/assets/tab-buttons/tab-button-close-dirty.png"
-	},
-	{
-		"class": "close_button",
-		"attributes": ["pressed"],
-		"layer1.opacity": 1.0,
-		"layer1.texture": "Theme - Nil/assets/tab-buttons/tab-button-close.png"
-	},
-	{
-		"class": "close_button",
-		"attributes": ["pressed", "dirty"],
-		"layer1.opacity": 1.0,
-		"layer1.texture": "Theme - Nil/assets/tab-buttons/tab-button-close-dirty.png"
-	},
+	// {
+	// 	"class": "close_button",
+	// 	"attributes": ["hover"],
+	// 	"layer0.texture": "",
+	// 	"layer0.tint": [182, 160, 0],
+	// 	"layer1.opacity": 0.5,
+	// 	"layer1.texture": "",
+	// 	"layer1.tint": [182, 160, 0],
+	// },
+	// {
+	// 	"class": "close_button",
+	// 	"attributes": ["hover", "dirty"],
+	// 	"layer1.opacity": 0.5,
+	// 	"layer1.texture": "",
+	// 	"layer1.tint": [182, 160, 0],
+	// },
+	// {
+	// 	"class": "close_button",
+	// 	"attributes": ["pressed", "dirty"],
+	// 	"layer1.opacity": 1.0,
+	// 	"layer1.texture": "",
+	// 	"layer1.tint": [182, 160, 0]
+	// },
 
-	/** Sidebar group closed **/
+	/**---------------------------------------**/
+	/** Sidebar (FOLDERS) icon - closed **/
 	{
 		"class": "disclosure_button_control",
-		"layer0.opacity": 0.7,
+		"content_margin": [10, 8],
+		"layer0.texture": "Theme - Nil/assets/arrows/folder-closed.png",
+	// 	"layer0.tint": [162, 162, 162],
+		"layer0.opacity": 1.0,
 		"layer0.inner_margin": 0,
+		"layer1.texture": "Theme - Nil/assets/arrows/folder-open.png",
+		// "layer1.tint": [162, 162, 162],
 		"layer1.opacity": 0.0,
 		"layer1.inner_margin": 0,
-		"layer2.opacity": 0.0,
-		"layer2.inner_margin": 0,
-		"layer3.opacity": 0.0,
-		"layer3.inner_margin": 0
+	// commented out because want folder icon same color regardless of mouse position
+		// "layer2.texture": "Theme - Nil/assets/arrows/folder-closed-hover.png",
+		// "layer2.tint": [212, 212, 212],
+		// "layer2.opacity": 0.0,
+		// "layer2.inner_margin": 0,
+		// "layer3.texture": "Theme - Nil/assets/arrows/folder-open-hover.png",
+		// "layer3.tint": [212, 212, 212]
+		// "layer3.opacity": 0.0,
+		// "layer3.inner_margin": 0
 	},
+	//commented out because want folder icon same color regardless of mouse position or selected
+	// {
+	// 	"class": "disclosure_button_control",
+	// 	"parents": [{"class": "tree_row", "attributes": ["hover"]}],
+	// 	"layer0.opacity": 0.0,
+	// 	"layer1.opacity": 0.0,
+	// 	"layer2.opacity": 0.7,
+	// 	"layer3.opacity": 0.0
+	// },
+	// {
+	// 	"class": "disclosure_button_control",
+	// 	"parents": [{"class": "tree_row", "attributes": ["selected"]}],
+	// 	"layer0.opacity": 0.0,
+	// 	"layer1.opacity": 0.0,
+	// 	"layer2.opacity": 0.7,
+	// 	"layer3.opacity": 0.0
+	// },
 
-	/** Arrow sidebar icons (enabled by default) **/
-	{
-		"class": "disclosure_button_control",
-		"settings": ["!sidebar_folders"],
-		"content_margin": [9, 7, 8, 6],
-		"layer0.texture": "Theme - Nil/assets/arrows/arrow-right.png",
-		"layer1.texture": "Theme - Nil/assets/arrows/arrow-down.png",
-		"layer2.texture": "Theme - Nil/assets/arrows/arrow-right-hover.png",
-		"layer3.texture": "Theme - Nil/assets/arrows/arrow-down-hover.png"
-	},
-
-	/** Folder sidebar icons (disabled by default) **/
-	{
-		"class": "disclosure_button_control",
-		"settings": ["sidebar_folders"],
-		"content_margin": [10, 8, 10, 8],
-		"layer0.texture": "Theme - Nil/assets/arrows/folder-closed.png",
-		"layer1.texture": "Theme - Nil/assets/arrows/folder-open.png",
-		"layer2.texture": "Theme - Nil/assets/arrows/folder-closed-hover.png",
-		"layer3.texture": "Theme - Nil/assets/arrows/folder-open-hover.png"
-	},
-
-	/** Colored folder icons (disabled by default) **/
-	{
-		"class": "disclosure_button_control",
-		"settings": ["colored_folder_glyphs"],
-		"layer0.tint": [230, 200, 255],
-		"layer1.tint": [230, 200, 255],
-		"layer2.tint": [190, 140, 255],
-		"layer3.tint": [190, 140, 255]
-	},
-	{
-		"class": "disclosure_button_control",
-		"settings": ["!colored_folder_glyphs"],
-		"layer0.tint": [162, 162, 162],
-		"layer1.tint": [162, 162, 162],
-		"layer2.tint": [180, 180, 180],
-		"layer3.tint": [180, 180, 180]
-	},
-
-	/** Sidebar group closed & highlighted **/
-	{
-		"class": "disclosure_button_control",
-		"parents": [{"class": "tree_row", "attributes": ["hover"]}],
-		"layer0.opacity": 0.0,
-		"layer1.opacity": 0.0,
-		"layer2.opacity": 0.7,
-		"layer3.opacity": 0.0
-	},
-	{
-		"class": "disclosure_button_control",
-		"parents": [{"class": "tree_row", "attributes": ["selected"]}],
-		"layer0.opacity": 0.0,
-		"layer1.opacity": 0.0,
-		"layer2.opacity": 0.7,
-		"layer3.opacity": 0.0
-	},
-
-	/** Sidebar group open **/
+	/**---------------------------------------**/
+	/** Sidebar (FOLDERS) icon - open **/
 	{
 		"class": "disclosure_button_control",
 		"attributes": ["expanded"],
 		"layer0.opacity": 0.0,
-		"layer1.opacity": 0.9,
-		"layer2.opacity": 0.0,
-		"layer3.opacity": 0.0
+		"layer1.opacity": 1.0,
+		// commented out because want folder icon same color regardless of mouse position
+		// "layer2.opacity": 0.0,
+		// "layer3.opacity": 0.0
 	},
-
-	/** Sidebar group open & highlighted **/
-	{
-		"class": "disclosure_button_control",
-		"attributes": ["expanded"],
-		"parents": [{"class": "tree_row", "attributes": ["hover"]}],
-		"layer0.opacity": 0.0,
-		"layer1.opacity": 0.0,
-		"layer2.opacity": 0.0,
-		"layer3.opacity": 0.9
-	},
-	{
-		"class": "disclosure_button_control",
-		"attributes": ["expanded"],
-		"parents": [{"class": "tree_row", "attributes": ["selected"]}],
-		"layer0.opacity": 0.0,
-		"layer1.opacity": 0.0,
-		"layer2.opacity": 0.0,
-		"layer3.opacity": 0.9
-	},
+	// commented out because want folder icon same color regardless of mouse position or selected
+	// {
+	// 	"class": "disclosure_button_control",
+	// 	"attributes": ["expanded"],
+	// 	"parents": [{"class": "tree_row", "attributes": ["hover"]}],
+	// 	"layer0.opacity": 0.0,
+	// 	"layer1.opacity": 0.0,
+	// 	"layer2.opacity": 0.0,
+	// 	"layer3.opacity": 0.9
+	// },
+	// {
+	// 	"class": "disclosure_button_control",
+	// 	"attributes": ["expanded"],
+	// 	"parents": [{"class": "tree_row", "attributes": ["selected"]}],
+	// 	"layer0.opacity": 0.0,
+	// 	"layer1.opacity": 0.0,
+	// 	"layer2.opacity": 0.0,
+	// 	"layer3.opacity": 0.9
+	// },
+	/**---------------------------------------**/
 
 
 /*==============================================================================
