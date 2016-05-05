@@ -16,7 +16,7 @@
 		"layer0.texture": "Theme - Nil/assets/dark/tabset-bg.png",
 		"layer0.inner_margin": [2, 6],
 		"layer0.opacity": 1.0,
-		"content_margin": [0, 0, 0, 0], // left, top, right, bottom
+		"content_margin": [0, 0, 0, 0], /* left, top, right, bottom */
 		"tab_overlap": 0,
 		"tab_width": 180,
 		"tab_min_width": 40,
@@ -85,19 +85,21 @@
 	/** Inactive tab label **/
 	{
 		"class": "tab_label",
-		"fg": [180, 180, 180],
-		"shadow_color": [0, 0, 0, 200],
-		"shadow_offset": [0, 0.5]
+		"fg": [212, 212, 212],
+		"font.face":"Verdana",
+		"font.size": 12.0
+		// "shadow_color": [0, 0, 0, 200],
+		// "shadow_offset": [0, 0.5]
 	},
 
 	/** Active tab label **/
-	{
-		"class": "tab_label",
-		"parents": [{"class": "tab_control", "attributes": ["selected"]}],
-		"shadow_color": [0, 0, 0, 165],
-		"shadow_offset": [0, 0.5],
-		"fg": [240, 240, 240, 255]
-	},
+	// commented out because want active tab label same font since see color bar under. too noisy to see multiple change
+	// 	"class": "tab_label",
+	// 	"parents": [{"class": "tab_control", "attributes": ["selected"]}],
+	// 	"shadow_color": [0, 0, 0, 165],
+	// 	"shadow_offset": [0, 0.5],
+	// 	"fg": [240, 240, 240, 255]
+	// },
 
 	/* - Dirty inactive tab label */
 	{
@@ -209,94 +211,107 @@
 	SCROLLBARS (overlay scrollbars from Default theme)
 ==============================================================================*/
 
+	/** Background of scrollbar */
 	{
 		"class": "scroll_bar_control",
-		"layer0.texture": "Theme - Nil/assets/dark/scrollbar/well-vertical.png",
+		"layer0.texture": "",
+		"layer0.tint": [8,8,8],
 		"layer0.opacity": 1.0,
 		"layer0.inner_margin": [1, 1],
+		"content_margin": [8, 3],
 		"blur": false
 	},
 	{
 		"class": "scroll_bar_control",
 		"attributes": ["horizontal"],
-		"layer0.texture": "Theme - Nil/assets/dark/scrollbar/well-horizontal.png",
+		"layer0.texture": "",
+		"layer0.tint": [8,8,8],
 		"layer0.opacity": 1.0,
 		"layer0.inner_margin": [1, 1],
+		"content_margin": [3, 8],
 		"blur": false
 	},
 	{
 		"class": "scroll_corner_control",
-		"layer0.texture": "Theme - Nil/assets/dark/scrollbar/well-corner.png",
+		"layer0.texture": "",
+		"layer0.tint": [8,8,8],
 		"layer0.opacity": 1.0,
 		"layer0.inner_margin": [1, 1]
 	},
 	{
 		"class": "puck_control",
-		"layer0.texture": "Theme - Nil/assets/dark/scrollbar/bar-vertical.png",
+		"layer0.texture": "",
+		"layer0.tint": [192, 32, 32],
 		"layer0.opacity": 1.0,
-		"layer0.inner_margin": [3, 3],
-		"content_margin": [6, 6],
+		// "layer0.inner_margin": [3, 3],
+		// "content_margin": [6, 6],
 		"blur": false
 	},
 	{
 		"class": "puck_control",
 		"attributes": ["horizontal"],
-		"layer0.texture": "Theme - Nil/assets/dark/scrollbar/bar-horizontal.png"
+		"layer0.texture": "",
+		"layer0.tint": [192, 32, 32],
+		"layer0.opacity": 1.0,
+		// "layer0.inner_margin": [3, 3],
+		// "content_margin": [4, 3],
+		"blur": false
 	},
-	{
-		"class": "scroll_area_control",
-		"settings": ["overlay_scroll_bars"],
-		"overlay": true
-	},
-	{
-		"class": "scroll_area_control",
-		"settings": ["!overlay_scroll_bars"],
-		"overlay": false
-	},
-	{
-		"class": "scroll_bar_control",
-		"settings": ["overlay_scroll_bars"],
-		"layer0.texture": "Theme - Nil/assets/overlay/overlay_bar_vertical.png",
-		"layer0.inner_margin": [0, 5],
-		"blur": true
-	},
-	{
-		"class": "scroll_bar_control",
-		"settings": ["overlay_scroll_bars"],
-		"attributes": ["horizontal"],
-		"layer0.texture": "Theme - Nil/assets/overlay/overlay_bar_horizontal.png",
-		"layer0.inner_margin": [5, 0],
-		"blur": true
-	},
-	{
-		"class": "puck_control",
-		"settings": ["overlay_scroll_bars"],
-		"layer0.texture": "Theme - Nil/assets/overlay/overlay_thumb_vertical.png",
-		"layer0.inner_margin": [0, 5],
-		"content_margin": [5, 20],
-		"blur": true
-	},
-	{
-		"class": "puck_control",
-		"settings": ["overlay_scroll_bars"],
-		"attributes": ["horizontal"],
-		"layer0.texture": "Theme - Nil/assets/overlay/overlay_thumb_horizontal.png",
-		"layer0.inner_margin": [5, 0],
-		"content_margin": [20, 5],
-		"blur": true
-	},
-	{
-		"class": "puck_control",
-		"settings": ["overlay_scroll_bars"],
-		"attributes": ["dark"],
-		"layer0.texture": "Theme - Nil/assets/overlay/overlay_dark_thumb_vertical.png"
-	},
-	{
-		"class": "puck_control",
-		"settings": ["overlay_scroll_bars"],
-		"attributes": ["horizontal", "dark"],
-		"layer0.texture": "Theme - Nil/assets/overlay/overlay_dark_thumb_horizontal.png"
-	},
+	// commented out because use same rectangle color texture for overlay scrollbars
+	// {
+	// 	"class": "scroll_area_control",
+	// 	"settings": ["overlay_scroll_bars"],
+	// 	"overlay": true
+	// },
+	// {
+	// 	"class": "scroll_area_control",
+	// 	"settings": ["!overlay_scroll_bars"],
+	// 	"overlay": false
+	// },
+	// {
+	// 	"class": "scroll_bar_control",
+	// 	"settings": ["overlay_scroll_bars"],
+	// 	"layer0.texture": "Theme - Nil/assets/overlay/overlay_bar_vertical.png",
+	// 	"layer0.inner_margin": [0, 5],
+	// 	"blur": true
+	// },
+	// {
+	// 	"class": "scroll_bar_control",
+	// 	"settings": ["overlay_scroll_bars"],
+	// 	"attributes": ["horizontal"],
+	// 	"layer0.texture": "Theme - Nil/assets/overlay/overlay_bar_horizontal.png",
+	// 	"layer0.inner_margin": [5, 0],
+	// 	"blur": true
+	// },
+	// {
+	// 	"class": "puck_control",
+	// 	"settings": ["overlay_scroll_bars"],
+	// 	"layer0.texture": "Theme - Nil/assets/overlay/overlay_thumb_vertical.png",
+	// 	"layer0.inner_margin": [0, 5],
+	// 	"content_margin": [5, 20],
+	// 	"blur": true
+	// },
+	// {
+	// 	"class": "puck_control",
+	// 	"settings": ["overlay_scroll_bars"],
+	// 	"attributes": ["horizontal"],
+	// 	"layer0.texture": "Theme - Nil/assets/overlay/overlay_thumb_horizontal.png",
+	// 	"layer0.inner_margin": [5, 0],
+	// 	"content_margin": [20, 5],
+	// 	"blur": true
+	// },
+	// {
+	// 	"class": "puck_control",
+	// 	"settings": ["overlay_scroll_bars"],
+	// 	"attributes": ["dark"],
+	// 	"layer0.texture": "Theme - Nil/assets/overlay/overlay_dark_thumb_vertical.png"
+	// },
+	// {
+	// 	"class": "puck_control",
+	// 	"settings": ["overlay_scroll_bars"],
+	// 	"attributes": ["horizontal", "dark"],
+	// 	"layer0.texture": "Theme - Nil/assets/overlay/overlay_dark_thumb_horizontal.png"
+	// },
 
 
 /*==============================================================================
@@ -338,23 +353,33 @@
 	/** General labels **/
 	{
 		"class": "label_control",
-		"color": [230, 230, 230]
+		"color": [212, 212, 212],
+		"font.face":"Verdana",
+		"font.size": 11.0
 	},
-	/** Text field labels **/
-	{
-		"class": "label_control",
-		"parents": [{"class": "panel_control"}],
-		"shadow_color": [0, 0, 0],
-		"shadow_offset": [0, 0.5]
-	},
-	/** Button labels **/
-	{
-		"class": "label_control",
-		"parents": [{"class": "button_control"}],
-		"color": [230, 230, 230],
-		"shadow_color": [0, 0, 0],
-		"shadow_offset": [0, 0.5]
-	},
+	/** Text field labels - commented out because inherit from above **/
+	// {
+	// 	"class": "label_control",
+	// 	"parents": [{"class": "panel_control"}],
+	// 	"shadow_color": [0, 0, 0],
+	// 	"shadow_offset": [0, 0.5]
+	// },
+	/** Button labels - commented out because inherit from above **/
+	// {
+	// 	"class": "label_control",
+	// 	"parents": [{"class": "button_control"}],
+	// 	"shadow_color": [0, 0, 0],
+	// 	"shadow_offset": [0, 1]
+	// },
+	/** Status bar label - commented out because inherit from above **/
+	// {
+	// 	"class": "label_control",
+	// 	"parents": [{"class": "status_bar"}],
+	// 	"font.size": 10,
+	// 	"color": [160, 160, 160],
+	// 	"shadow_color": [0, 0, 0],
+	// 	"shadow_offset": [0, 0.5]
+	// },
 
 
 /*==============================================================================
@@ -364,17 +389,18 @@
 	/** Tooltip container **/
 	{
 		"class": "tool_tip_control",
-		"layer0.texture": "Theme - Nil/assets/dark/tooltip.png",
-		"layer0.inner_margin": [4, 4],
+		"layer0.texture": "",
+		"layer0.tint": [0, 0, 0],
+		"layer0.inner_margin": [2, 2],
 		"layer0.opacity": 1,
-		"content_margin": [6, 4]
+		"content_margin": [3, 3]
 	},
 	/** Tooltip content **/
 	{
 		"class": "tool_tip_label_control",
-		"color": [160, 160, 160],
-		"shadow_offset": [0, 0.5],
-		"shadow_color": [0, 0, 0, 255]
+		"color": [255, 255, 255],
+		// "shadow_offset": [0, 0.5],
+		// "shadow_color": [0, 0, 0, 255]
 	},
 
 
@@ -385,7 +411,8 @@
 	/** Status bar container **/
 	{
 		"class": "status_bar",
-		"layer0.texture": "Theme - Nil/assets/dark/status-bar-bg.png",
+		"layer0.texture": "",
+		"layer0.tint": [8,8,8],
 		"layer0.opacity": 1.0,
 		"layer0.inner_margin": [2, 2],
 		"content_margin": [6, 5, 6, 5]
@@ -393,16 +420,6 @@
 	{
 		"class": "status_button",
 		"min_size": [100, 0]
-	},
-
-	/** Status bar label **/
-	{
-		"class": "label_control",
-		"parents": [{"class": "status_bar"}],
-		"font.size": 10,
-		"color": [160, 160, 160],
-		"shadow_color": [0, 0, 0],
-		"shadow_offset": [0, 0.5]
 	},
 
 
@@ -413,7 +430,7 @@
 	/** Sidebar container (border) **/
 	{
 		"class": "sidebar_container",
-		"layer0.tint": [150, 150, 150],
+		"layer0.tint": [40, 40, 40],
 		"layer0.opacity": 1.0,
 		"layer0.draw_center": false,
 		"layer0.inner_margin": [0, 0, 1, 0],
@@ -427,7 +444,7 @@
 		"indent": 13,
 		"indent_offset": 15,
 		"indent_top_level": false,
-		"layer0.tint": [32,32,32],	/* darker gray */
+		"layer0.tint": [22,22,22],	/* darker gray */
 		"layer0.opacity": 1.0,
 		"dark_content": true
 	},
@@ -463,7 +480,7 @@
 	/** Sidebar heading **/
 	{
 		"class": "sidebar_heading",
-		"color": [155, 110, 248],
+		"color": [182, 160, 0],
 		"font.bold": true,
 		"shadow_color": [0, 0, 0],
 		"shadow_offset": [0, 0.5]
@@ -494,7 +511,7 @@
 	{
 		"class": "sidebar_label",
 		"parents": [{"class": "tree_row", "attributes": ["expandable"]}],
-		"color": [155, 110, 248]
+		"color": [182, 160, 0]
 	},
 	{
 		"class": "sidebar_label",
@@ -662,18 +679,26 @@
 	/** Standard buttons (used for Find / Replace panel) **/
 	{
 		"class": "button_control",
-		"content_margin": [6, 5, 6, 6],
+		"content_margin": [0, 5, 0, 6],
 		"min_size": [75, 0],
 
 		/*	Default button state */
-		"layer0.texture": "Theme - Nil/assets/dark/btn-large.png",
+		"layer0.texture": "",
+		"layer0.tint": [32,32,32],
 		"layer0.opacity": 1.0,
 		"layer0.inner_margin": [6, 6],
 
 		/*	Pressed button setup */
-		"layer1.texture": "Theme - Nil/assets/dark/btn-large-active.png",
+		"layer1.texture": "",
+		"layer1.tint": [32,128,192],
 		"layer1.opacity": 0.0,
-		"layer1.inner_margin": [6, 6]
+		"layer1.inner_margin": [6, 6],
+
+		/*	Hover button state */
+		// "layer2.texture": "",
+		"layer2.tint": [96,32,32],
+		"layer2.opacity": { "target": 0.0, "speed": 100, "interpolation": "smoothstep" },
+		"layer2.inner_margin": [6, 6]
 	},
 	{
 		/*	Pressed button state */
@@ -682,7 +707,19 @@
 		"layer1.opacity": 1.0,
 		"content_margin": [6, 6, 6, 6]
 	},
-
+	{
+		/*	Pressed hover button state */
+			"class": "button_control",
+			"attributes": ["pressed", "hover"],
+			"layer2.tint": [32,128,192],
+			"layer2.opacity": 0.0
+	},
+	{
+		/*	Hover button state */
+			"class": "button_control",
+			"attributes": ["hover"],
+			"layer2.opacity": 1.0
+	},
 
 /*==============================================================================
 	TEXT INPUT FIELD
@@ -691,10 +728,11 @@
 	/** Text input field item **/
 	{
 		"class": "text_line_control",
-		"layer0.texture": "Theme - Nil/assets/dark/text-field.png",
+		"layer0.texture": "",  /* this is border of the find panel inputbox and quick panel inputbox */
+		"layer0.tint": [8,8,8], /* this is border of the find panel inputbox and quick panel inputbox */
 		"layer0.opacity": 1.0,
-		"layer0.inner_margin": [8, 8, 8, 8],
-		"content_margin": [3, 3, 3, 3]
+		"layer0.inner_margin": [0, 0, 0, 0],
+		"content_margin": [4, 4, 4, 4] /* this is border of the find box */
 	},
 
 
@@ -702,22 +740,13 @@
 	PANEL BACKGROUNDS
 ==============================================================================*/
 
-	/** Bottom panel background **/
+	/** Bottom panel background (such as find bar) **/
 	{
 		"class": "panel_control",
-		"layer0.texture": "Theme - Nil/assets/dark/panel-bg.png",
-		"layer0.inner_margin": [4, 4, 4, 4],
+		"layer0.texture": "",
+		"layer0.tint": [8,8,8],
+		"layer0.inner_margin": [0, 0, 0, 0],
 		"layer0.opacity": 1.0
-	},
-
-	/** Quick panel background **/
-	{
-		"class": "overlay_control",
-		"layer0.texture": "Theme - Nil/assets/dark/quickpanel.png",
-		"layer0.inner_margin": [10, 10, 10, 10],  /* left, top, right, bottom */
-		"layer0.opacity": 1.0,
-		"layer1.opacity": 0, /* HIDDEN */
-		"content_margin": [11, 8, 11, 17]
 	},
 
 
@@ -725,16 +754,29 @@
 	QUICK PANEL
 ==============================================================================*/
 
+	/** Quick panel background **/
+	{
+		"class": "overlay_control",
+		"layer0.texture": "",
+		"layer0.tint": [64, 64, 64],
+		"layer0.inner_margin": [10, 10, 10, 10],  /* left, top, right, bottom */
+		"layer0.opacity": 1.0,
+		"layer1.opacity": 0, /* HIDDEN */
+		"content_margin": [0, 0, 0, 0]
+	},
+
 	{
 		"class": "quick_panel",
-		"row_padding": [4, 3],
+		"row_padding": [1, 0], /*left-right padding, top-bottom padding */
 		"layer0.tint": [45, 45, 45],
 		"layer0.opacity": 1,
 		"dark_content": true
 	},
 	{
+	/** Quick panel background row item **/
 		"class": "quick_panel_row",
-		"layer0.texture": "Theme - Nil/assets/dark/qp-row.png",
+		"layer0.texture": "",
+		"layer0.tint": [8,8,8],
 		"layer0.opacity": 1.0,
 		"layer0.inner_margin": [4, 4, 4, 4],
 		"layer1.draw_center": true
@@ -742,27 +784,30 @@
 	{
 		"class": "quick_panel_row",
 		"attributes": ["selected"],
-		"layer0.texture": "Theme - Nil/assets/dark/qp-row-selected.png"
+		"layer0.texture": "",
+		"layer0.tint": [96,32,32],
 	},
 	{
+	/** Quick_panel and mini_quick_panel label **/
 		"class": "quick_panel_label",
-		"fg": [190, 190, 190, 255],
+		"fg": [255, 255, 255, 255],
 		"match_fg": [255, 255, 255, 255],
-		"bg": [71, 71, 71, 255],
-		"selected_fg": [220, 220, 220, 255],
-		"selected_match_fg": [255, 255, 255, 255],
-		"selected_bg": [134, 134, 134, 255]
+		// "bg": [71, 71, 71, 255], /* what does this do why do we need it */
+		"selected_fg": [255, 255, 255, 255],
+		"selected_match_fg": [32,128,192, 255],
+		// "selected_bg": [255, 134, 134, 255], /* what does this do why do we need it */
 	},
 	{
 		"class": "quick_panel_path_label",
-		"fg": [100, 100, 100, 255],
-		"match_fg": [200, 200, 200, 255],
-		"bg": [41, 41, 41, 255],
-		"selected_fg": [120, 120, 120, 255],
-		"selected_match_fg": [255, 255, 255, 255],
-		"selected_bg": [24, 24, 24, 255]
+		"fg": [128, 128, 128, 255],
+		"match_fg": [128, 128, 128, 255],
+		// "bg": [41, 41, 41, 255], /* what does this do why do we need it */
+		"selected_fg": [128, 128, 128, 255],
+		"selected_match_fg": [32, 128, 192, 255],
+		// "selected_bg": [24, 24, 24, 255] /* what does this do why do we need it */
 	},
 	{
+	/** Not sure where this is used do we need it **/		
 		"class": "quick_panel_score_label",
 		"fg": [90, 90, 90, 255],
 		"bg": [41, 41, 41, 255],
@@ -777,14 +822,16 @@
 
 	{
 		"class": "mini_quick_panel_row",
-		"layer0.texture": "Theme - Nil/assets/dark/qp-row.png",
-		"layer0.inner_margin": [4, 4, 4, 4],
+		"layer0.texture": "",
+		"layer0.tint": [32,32,32],
+		"layer0.inner_margin": [0, 0, 0, 0],
 		"layer0.opacity": 1.0
 	},
 	{
 		"class": "mini_quick_panel_row",
 		"attributes": ["selected"],
-		"layer0.texture": "Theme - Nil/assets/dark/qp-row-selected.png"
+		"layer0.texture": "",
+		"layer0.tint": [92, 32, 32],
 	},
 
 
@@ -795,11 +842,14 @@
 	{
 		"class": "popup_control",
 		"content_margin": [0, 0]
+		// "layer0.tint": [64, 64, 64, 255], /* what does this do and why do we need it */
+		// "layer0.opacity": 1.0, /* what does this do and why do we need it */
 	},
 	{
+	/** Autocomplete background **/
 		"class": "auto_complete",
 		"row_padding": [2, 2],
-		"layer0.tint": [30, 30, 30],
+		"layer0.tint": [8,8,16],
 		"layer0.opacity": 1.0,
 		"dark_content": true
 	},
@@ -809,7 +859,7 @@
 		"match_fg": [255, 255, 255],
 		"bg": [26, 26, 26],
 		"selected_fg": [255, 255, 255],
-		"selected_match_fg": [255, 255, 255],
+		"selected_match_fg": [32,128,192],
 		"selected_bg": [86, 86, 86]
 	},
 	{
@@ -827,38 +877,39 @@
 
 /*==============================================================================
 	BOTTOM PANEL BUTTONS
-	On:  [3, 198, 252]
-	Off: [92, 92, 92]
+	Off: [212, 212, 212]
+	Hover: [140, 140, 140]
+	On:  [32, 128, 192]
 ==============================================================================*/
 
 	{
-	    "class": "icon_button_control",
-	    "layer0.texture": "Theme - Nil/assets/glyphs/bg-center.png",
-	    "layer0.inner_margin": [4, 4],
-	    "layer0.opacity": 1.0,
-	    "layer0.tint": [32, 32, 32],
-	    "content_margin": [4, 4, 4, 4]
+	"class": "icon_button_control",
+		"layer0.texture": "Theme - Nil/assets/glyphs/bg-center.png",
+		"layer0.inner_margin": [4, 4],
+		"layer0.opacity": 1.0,
+		"layer0.tint": [32, 32, 32],
+		"content_margin": [4, 4, 4, 4]
 	},
 
 	{
-	    "class": "icon_button_control",
-	    "attributes": ["left"],
-	    "layer0.texture": "Theme - Nil/assets/glyphs/bg-left.png",
-	    "layer1.texture": "Theme - Nil/assets/glyphs/seg-isolated.png"
+		"class": "icon_button_control",
+		"attributes": ["left"],
+		"layer0.texture": "Theme - Nil/assets/glyphs/bg-left.png",
+		"layer1.texture": "Theme - Nil/assets/glyphs/seg-isolated.png"
 	},
 
 	{
-	    "class": "icon_button_control",
-	    "attributes": ["right"],
-	    "layer0.texture": "Theme - Nil/assets/glyphs/bg-right.png",
-	    "layer1.texture": "Theme - Nil/assets/glyphs/seg-isolated.png"
+		"class": "icon_button_control",
+		"attributes": ["right"],
+		"layer0.texture": "Theme - Nil/assets/glyphs/bg-right.png",
+		"layer1.texture": "Theme - Nil/assets/glyphs/seg-isolated.png"
 	},
 
 	{
-	    "class": "icon_button_control",
-	    "attributes": ["left", "right"],
-	    "layer0.texture": "Theme - Nil/assets/glyphs/bg-isolated.png",
-	    "layer1.texture": "Theme - Nil/assets/glyphs/seg-isolated.png"
+		"class": "icon_button_control",
+		"attributes": ["left", "right"],
+		"layer0.texture": "Theme - Nil/assets/glyphs/bg-isolated.png",
+		"layer1.texture": "Theme - Nil/assets/glyphs/seg-isolated.png"
 	},
 
 	/** Regex search button **/
@@ -866,54 +917,54 @@
 		"class": "icon_regex",
 		"layer0.texture": "Theme - Nil/assets/glyphs/regex.png",
 		"layer0.opacity": 1.0,
-		"layer0.tint": [122, 122, 122],
+		"layer0.tint": [192,192,192],
 		"content_margin": [8, 7]
 	},
 	{
 		"class": "icon_regex",
 		"parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
-		"layer0.tint": [81, 143, 160]
+		"layer0.tint": [140, 140, 140]
 	},
 	{
 		"class": "icon_regex",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [3, 198, 252]
+		"layer0.tint": [32, 128, 192]
 	},
 	/** Case sensitive search button **/
 	{
 		"class": "icon_case",
 		"layer0.texture": "Theme - Nil/assets/glyphs/case.png",
 		"layer0.opacity": 1.0,
-		"layer0.tint": [122, 122, 122],
+		"layer0.tint": [212, 212, 212],
 		"content_margin": [8, 7]
 	},
 	{
 		"class": "icon_case",
 		"parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
-		"layer0.tint": [81, 143, 160]
+		"layer0.tint": [140, 140, 140]
 	},
 	{
 		"class": "icon_case",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [3, 198, 252]
+		"layer0.tint": [32, 128, 192]
 	},
 	/** Match whole word search button **/
 	{
 		"class": "icon_whole_word",
 		"layer0.texture": "Theme - Nil/assets/glyphs/word-only.png",
 		"layer0.opacity": 1.0,
-		"layer0.tint": [122, 122, 122],
+		"layer0.tint": [212, 212, 212],
 		"content_margin": [8, 7]
 	},
 	{
 		"class": "icon_whole_word",
 		"parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
-		"layer0.tint": [81, 143, 160]
+		"layer0.tint": [140, 140, 140]
 	},
 	{
 		"class": "icon_whole_word",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [3, 198, 252]
+		"layer0.tint": [32, 128, 192]
 	},
 
 	/** Reverse search direction button **/
@@ -921,54 +972,54 @@
 		"class": "icon_reverse",
 		"layer0.texture": "Theme - Nil/assets/glyphs/reverse.png",
 		"layer0.opacity": 1.0,
-		"layer0.tint": [122, 122, 122],
+		"layer0.tint": [212, 212, 212],
 		"content_margin": [8, 7]
 	},
 	{
 		"class": "icon_reverse",
 		"parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
-		"layer0.tint": [81, 143, 160]
+		"layer0.tint": [140, 140, 140]
 	},
 	{
 		"class": "icon_reverse",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [3, 198, 252]
+		"layer0.tint": [32, 128, 192]
 	},
 	/** Search wrap button **/
 	{
 		"class": "icon_wrap",
 		"layer0.texture": "Theme - Nil/assets/glyphs/wrap.png",
 		"layer0.opacity": 1.0,
-		"layer0.tint": [122, 122, 122],
+		"layer0.tint": [212, 212, 212],
 		"content_margin": [8, 7]
 	},
 	{
 		"class": "icon_wrap",
 		"parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
-		"layer0.tint": [81, 143, 160]
+		"layer0.tint": [140, 140, 140]
 	},
 	{
 		"class": "icon_wrap",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [3, 198, 252]
+		"layer0.tint": [32, 128, 192]
 	},
 	/** Search in selection button **/
 	{
 		"class": "icon_in_selection",
 		"layer0.texture": "Theme - Nil/assets/glyphs/in-selection.png",
 		"layer0.opacity": 1.0,
-		"layer0.tint": [122, 122, 122],
+		"layer0.tint": [212, 212, 212],
 		"content_margin": [8, 7]
 	},
 	{
 		"class": "icon_in_selection",
 		"parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
-		"layer0.tint": [81, 143, 160]
+		"layer0.tint": [140, 140, 140]
 	},
 	{
 		"class": "icon_in_selection",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [3, 198, 252]
+		"layer0.tint": [32, 128, 192]
 	},
 
 	/** Preserve case button **/
@@ -976,18 +1027,18 @@
 		"class": "icon_preserve_case",
 		"layer0.texture": "Theme - Nil/assets/glyphs/preserve-case.png",
 		"layer0.opacity": 1.0,
-		"layer0.tint": [122, 122, 122],
+		"layer0.tint": [212, 212, 212],
 		"content_margin": [21, 7]
 	},
 	{
 		"class": "icon_preserve_case",
 		"parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
-		"layer0.tint": [81, 143, 160]
+		"layer0.tint": [140, 140, 140]
 	},
 	{
 		"class": "icon_preserve_case",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [3, 198, 252]
+		"layer0.tint": [32, 128, 192]
 	},
 
 	/** Highlight results button **/
@@ -995,18 +1046,18 @@
 		"class": "icon_highlight",
 		"layer0.texture": "Theme - Nil/assets/glyphs/highlight.png",
 		"layer0.opacity": 1.0,
-		"layer0.tint": [122, 122, 122],
+		"layer0.tint": [212, 212, 212],
 		"content_margin": [8, 7]
 	},
 	{
 		"class": "icon_highlight",
 		"parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
-		"layer0.tint": [81, 143, 160]
+		"layer0.tint": [140, 140, 140]
 	},
 	{
 		"class": "icon_highlight",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [3, 198, 252]
+		"layer0.tint": [32, 128, 192]
 	},
 
 
@@ -1019,36 +1070,36 @@
 		"class": "icon_context",
 		"layer0.texture": "Theme - Nil/assets/glyphs/context.png",
 		"layer0.opacity": 1.0,
-		"layer0.tint": [122, 122, 122],
+		"layer0.tint": [212, 212, 212],
 		"content_margin": [8, 7]
 	},
 	{
 		"class": "icon_context",
 		"parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
-		"layer0.tint": [81, 143, 160]
+		"layer0.tint": [140, 140, 140]
 	},
 	{
 		"class": "icon_context",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [3, 198, 252]
+		"layer0.tint": [32, 128, 192]
 	},
 	/** Use search buffer **/
 	{
 		"class": "icon_use_buffer",
 		"layer0.texture": "Theme - Nil/assets/glyphs/buffer.png",
 		"layer0.opacity": 1.0,
-		"layer0.tint": [122, 122, 122],
+		"layer0.tint": [212, 212, 212],
 		"content_margin": [8, 7]
 	},
 	{
 		"class": "icon_use_buffer",
 		"parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
-		"layer0.tint": [81, 143, 160]
+		"layer0.tint": [140, 140, 140]
 	},
 	{
 		"class": "icon_use_buffer",
 		"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-		"layer0.tint": [3, 198, 252]
+		"layer0.tint": [32, 128, 192]
 	},
 
 
