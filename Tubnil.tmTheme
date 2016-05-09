@@ -372,17 +372,6 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>String interpolation</string>
-			<key>scope</key>
-			<string>constant.character.escaped, constant.character.escape, string source, string source.ruby</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#797BE6</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
 			<string>Git-Diff Background</string>
 			<key>scope</key>
 			<string>meta.diff.git-commit</string>
